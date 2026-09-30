@@ -1,0 +1,79 @@
+{
+  "env": {
+    "model": "EleutherAI/pythia-160m",
+    "method": "custom_fake_int4",
+    "dtype": "torch.float32",
+    "attention": "sdpa",
+    "device": "cuda",
+    "device_name": "AMD Radeon 780M Graphics",
+    "torch": "2.13.0+rocm10.0.0",
+    "hip": "7.15.26333",
+    "batch_size": 1,
+    "warmup": 10,
+    "iterations": 50
+  },
+  "quantization": {
+    "bits": 4,
+    "int4_qmax": 7,
+    "group_size": 64,
+    "scheme": "symmetric, two's complement",
+    "weight_dtype": "torch.uint8 (two 4-bit codes per byte)",
+    "scale_dtype": "torch.float32",
+    "quantized_layers": 49,
+    "quantized_params": 123568128,
+    "bits_per_quantized_weight": 4.5,
+    "weight_relative_rmse": 0.0763265149649396,
+    "max_logit_diff_vs_fp32": 188.44140625,
+    "mean_logit_diff_vs_fp32": 27.204824447631836
+  },
+  "size": {
+    "params": 162322944,
+    "parameter_memory_mb": 147.521484375,
+    "buffer_memory_mb": 66.60357666015625,
+    "storage_mb": 214.12506103515625,
+    "fp32_storage_mb": 619.2129516601562,
+    "bits_per_param": 11.065664260007507
+  },
+  "prefill": {
+    "32": {
+      "mean_ms": 49.79375199996866,
+      "median_ms": 48.885800009884406,
+      "std_ms": 4.442551790562281,
+      "p95_ms": 53.30500000854954,
+      "tokens_per_sec": 654.5868123980747
+    },
+    "128": {
+      "mean_ms": 96.08031800104072,
+      "median_ms": 90.45850000256905,
+      "std_ms": 15.065400981190484,
+      "p95_ms": 114.71030001121107,
+      "tokens_per_sec": 1415.0135144443557
+    },
+    "512": {
+      "mean_ms": 298.2299799993052,
+      "median_ms": 296.9239000012749,
+      "std_ms": 7.0390063327829795,
+      "p95_ms": 302.69439998664893,
+      "tokens_per_sec": 1724.3475516716628
+    }
+  },
+  "decode": {
+    "mean_ms": 59.642311874767984,
+    "median_ms": 52.6185999988229,
+    "std_ms": 18.06310404502678,
+    "p95_ms": 105.92170000018086,
+    "tokens_per_sec": 19.00468655612978
+  },
+  "memory": {
+    "model_memory_before_fwd_mb": 263.10546875,
+    "peak_mb": 510.85546875,
+    "activation_mb": 247.75
+  },
+  "perplexity": {
+    "dataset": "built-in text",
+    "tokens": 800,
+    "tokens_predicted": 799,
+    "loss": 5.032710552215576,
+    "ppl": 153.3481079265152
+  }
+}

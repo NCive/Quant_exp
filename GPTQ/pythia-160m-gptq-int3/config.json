@@ -1,0 +1,84 @@
+{
+  "architectures": [
+    "GPTNeoXForCausalLM"
+  ],
+  "attention_bias": true,
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classifier_dropout": 0.1,
+  "dtype": "float16",
+  "eos_token_id": 0,
+  "hidden_act": "gelu",
+  "hidden_dropout": 0.0,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 2048,
+  "model_type": "gpt_neox",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "quantization_config": {
+    "bits": 3,
+    "checkpoint_format": "gptq",
+    "desc_act": true,
+    "format": "gptq",
+    "group_size": 64,
+    "lm_head": false,
+    "meta": {
+      "act_group_aware": false,
+      "auto_forward_data_parallel": true,
+      "damp_auto_increment": 0.01,
+      "damp_percent": 0.1,
+      "dense_vram_strategy": "exclusive",
+      "dense_vram_strategy_devices": null,
+      "fallback": {
+        "smooth": null,
+        "strategy": "rtn",
+        "threshold": "0.5%"
+      },
+      "foem": null,
+      "gc_mode": "interval",
+      "gptaq": null,
+      "hessian": {
+        "chunk_bytes": null,
+        "chunk_size": null,
+        "dedup_shared_inputs": true,
+        "staging_dtype": "float32"
+      },
+      "mock_quantization": false,
+      "moe_vram_strategy": "exclusive",
+      "moe_vram_strategy_devices": null,
+      "mse": 0.0,
+      "offload_to_disk": false,
+      "offload_to_disk_path": null,
+      "pack_impl": "cpu",
+      "quantizer": [
+        "gptqmodel:7.5.0"
+      ],
+      "static_groups": false,
+      "telemetry": {
+        "device": false
+      },
+      "true_sequential": true,
+      "uri": "https://github.com/modelcloud/gptqmodel",
+      "wait_for_submodule_finalizers": false
+    },
+    "method": "gptq",
+    "pack_dtype": "int32",
+    "quant_method": "gptq",
+    "sym": true
+  },
+  "rope_parameters": {
+    "partial_rotary_factor": 0.25,
+    "rope_theta": 10000,
+    "rope_type": "default"
+  },
+  "tie_word_embeddings": false,
+  "transformers_version": "5.17.0",
+  "use_cache": true,
+  "use_parallel_residual": true,
+  "vocab_size": 50304
+}

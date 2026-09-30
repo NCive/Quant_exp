@@ -1,0 +1,58 @@
+{
+  "env": {
+    "model": "EleutherAI/pythia-160m",
+    "dtype": "torch.bfloat16",
+    "attention": "sdpa",
+    "device": "cuda",
+    "device_name": "AMD Radeon 780M Graphics",
+    "torch": "2.13.0+rocm10.0.0",
+    "batch_size": 1,
+    "warmup": 10,
+    "iterations": 50
+  },
+  "size": {
+    "params": 162322944,
+    "storage_mb": 309.60650634765625
+  },
+  "prefill": {
+    "32": {
+      "mean_ms": 13.59493800002383,
+      "median_ms": 12.640150000152062,
+      "std_ms": 2.7051513148582993,
+      "p95_ms": 20.046300000103656,
+      "tokens_per_sec": 2531.615526684022
+    },
+    "128": {
+      "mean_ms": 16.191629999666475,
+      "median_ms": 15.339650000896654,
+      "std_ms": 2.7505719931564263,
+      "p95_ms": 20.80040000146255,
+      "tokens_per_sec": 8344.38856118086
+    },
+    "512": {
+      "mean_ms": 65.26803000029759,
+      "median_ms": 63.98610000178451,
+      "std_ms": 9.26140059836996,
+      "p95_ms": 67.0023000020592,
+      "tokens_per_sec": 8001.737877222097
+    }
+  },
+  "decode": {
+    "mean_ms": 11.320144062415238,
+    "median_ms": 11.190350000106264,
+    "std_ms": 1.0309592177027398,
+    "p95_ms": 12.683900000411086,
+    "tokens_per_sec": 89.36270983396444
+  },
+  "memory": {
+    "weights_mb": 347.49072265625,
+    "peak_mb": 398.24072265625,
+    "activation_mb": 50.75
+  },
+  "perplexity": {
+    "dataset": "built-in text",
+    "tokens_predicted": 799,
+    "loss": 3.4255411624908447,
+    "ppl": 30.73927529399607
+  }
+}

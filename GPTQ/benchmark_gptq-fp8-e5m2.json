@@ -1,0 +1,76 @@
+{
+  "env": {
+    "model": "EleutherAI/pythia-160m",
+    "method": "gptq_float8_e5m2",
+    "device": "cuda:0",
+    "threads": 8,
+    "torch": "2.13.0+rocm10.0.0",
+    "batch_size": 1,
+    "warmup": 10,
+    "iterations": 50,
+    "bits": 8,
+    "group_size": null,
+    "scheme": "per-row scale, weight-only FP8, no calibration",
+    "backend": "BACKEND.FP8_TORCH",
+    "eager_dequant": true,
+    "kernel_classes": {
+      "TorchFP8Linear": 48
+    },
+    "load_time_s": 1.567250200023409
+  },
+  "size": {
+    "params": 162322944,
+    "storage_mb": 619.5293579101562,
+    "fp32_storage_mb": 619.2129516601562,
+    "effective_bits_per_param": 32.016354557985345,
+    "checkpoint_mb": 232.34996509552002
+  },
+  "prefill": {
+    "32": {
+      "mean_ms": 100.661673998693,
+      "median_ms": 77.69040000857785,
+      "std_ms": 42.95942040892914,
+      "p95_ms": 200.01410000259057,
+      "tokens_per_sec": 411.8913018399552
+    },
+    "128": {
+      "mean_ms": 152.29364400031045,
+      "median_ms": 118.90000000130385,
+      "std_ms": 51.48397966845703,
+      "p95_ms": 234.47629998554476,
+      "tokens_per_sec": 1076.534903268262
+    },
+    "512": {
+      "mean_ms": 325.27311600220855,
+      "median_ms": 317.87230001646094,
+      "std_ms": 27.095375033943053,
+      "p95_ms": 362.0228999934625,
+      "tokens_per_sec": 1610.7097094445983
+    }
+  },
+  "decode": {
+    "mean_ms": 89.13909093789698,
+    "median_ms": 76.85595001385082,
+    "std_ms": 32.07872382816035,
+    "p95_ms": 184.05169999459758,
+    "tokens_per_sec": 13.011354356035962
+  },
+  "memory": {
+    "kind": "cuda_allocated",
+    "before_mb": 653.90966796875,
+    "peak_mb": 754.15966796875,
+    "activation_mb": 100.25
+  },
+  "perplexity": {
+    "dataset": "built-in text",
+    "tokens": 800,
+    "tokens_predicted": 799,
+    "loss": 26.712873458862305,
+    "ppl": 399257919130.7301
+  },
+  "fidelity": {
+    "max_abs_logit_diff": 625.6721801757812,
+    "mean_abs_logit_diff": 469.94378662109375,
+    "top1_agreement": 0.0
+  }
+}

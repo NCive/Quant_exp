@@ -1,0 +1,51 @@
+{
+  "bits": 8,
+  "group_size": 64,
+  "desc_act": true,
+  "lm_head": false,
+  "method": "gptq",
+  "quant_method": "gptq",
+  "format": "gptq",
+  "checkpoint_format": "gptq",
+  "pack_dtype": "int32",
+  "meta": {
+    "quantizer": [
+      "gptqmodel:7.5.0"
+    ],
+    "uri": "https://github.com/modelcloud/gptqmodel",
+    "damp_percent": 0.1,
+    "damp_auto_increment": 0.01,
+    "static_groups": false,
+    "true_sequential": true,
+    "mse": 0.0,
+    "gptaq": null,
+    "foem": null,
+    "act_group_aware": false,
+    "fallback": {
+      "strategy": "rtn",
+      "threshold": "0.5%",
+      "smooth": null
+    },
+    "offload_to_disk": false,
+    "telemetry": {
+      "device": false
+    },
+    "offload_to_disk_path": null,
+    "pack_impl": "cpu",
+    "gc_mode": "interval",
+    "wait_for_submodule_finalizers": false,
+    "auto_forward_data_parallel": true,
+    "dense_vram_strategy": "exclusive",
+    "dense_vram_strategy_devices": null,
+    "moe_vram_strategy": "exclusive",
+    "moe_vram_strategy_devices": null,
+    "mock_quantization": false,
+    "hessian": {
+      "chunk_size": null,
+      "chunk_bytes": null,
+      "staging_dtype": "float32",
+      "dedup_shared_inputs": true
+    }
+  },
+  "sym": true
+}

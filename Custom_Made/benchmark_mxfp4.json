@@ -1,0 +1,97 @@
+{
+  "env": {
+    "model": "EleutherAI/pythia-160m",
+    "method": "custom_fake_mxfp4",
+    "dtype": "torch.float32",
+    "attention": "sdpa",
+    "device": "cuda",
+    "device_name": "AMD Radeon 780M Graphics",
+    "torch": "2.13.0+rocm10.0.0",
+    "hip": "7.15.26333",
+    "batch_size": 1,
+    "warmup": 10,
+    "iterations": 50
+  },
+  "quantization": {
+    "format": "MXFP4 (OCP Microscaling, FP4 E2M1 elements)",
+    "block_size": 32,
+    "fp4_levels": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.0,
+      6.0
+    ],
+    "fp4_max": 6.0,
+    "scale_format": "E8M0 (uint8, power-of-two exponent, bias 127)",
+    "weight_dtype": "torch.uint8 (two 4-bit codes per byte)",
+    "scale_dtype": "torch.uint8",
+    "quantized_layers": 49,
+    "quantized_params": 123568128,
+    "bits_per_quantized_weight": 4.25,
+    "weight_relative_rmse": 0.10950284768812317,
+    "max_logit_diff_vs_fp32": 289.1905517578125,
+    "mean_logit_diff_vs_fp32": 41.437721252441406
+  },
+  "size": {
+    "params": 162322944,
+    "parameter_memory_mb": 147.521484375,
+    "buffer_memory_mb": 62.92095947265625,
+    "storage_mb": 210.44244384765625,
+    "fp32_storage_mb": 619.2129516601562,
+    "bits_per_param": 10.875352088242066
+  },
+  "prefill": {
+    "32": {
+      "mean_ms": 48.16777200001525,
+      "median_ms": 46.386549998715054,
+      "std_ms": 7.116885235815102,
+      "min_ms": 45.21370001020841,
+      "p95_ms": 50.78969999158289,
+      "n": 50,
+      "tokens_per_sec": 689.8551412184443
+    },
+    "128": {
+      "mean_ms": 87.66901599883568,
+      "median_ms": 86.26314999855822,
+      "std_ms": 8.629858850708235,
+      "min_ms": 79.84600000781938,
+      "p95_ms": 91.36199999193195,
+      "n": 50,
+      "tokens_per_sec": 1483.8317404608963
+    },
+    "512": {
+      "mean_ms": 279.68237000051886,
+      "median_ms": 278.1019499961985,
+      "std_ms": 7.3112589265917265,
+      "min_ms": 267.1229000116,
+      "p95_ms": 286.72080000978895,
+      "n": 50,
+      "tokens_per_sec": 1841.0514561548334
+    }
+  },
+  "decode": {
+    "mean_ms": 52.27880281263424,
+    "median_ms": 51.28005000005942,
+    "std_ms": 5.6919704422618,
+    "min_ms": 44.21279999951366,
+    "p95_ms": 59.26069999986794,
+    "n": 320,
+    "tokens_per_sec": 19.5007610171761
+  },
+  "memory": {
+    "model_memory_before_fwd_mb": 267.021484375,
+    "peak_mb": 523.982421875,
+    "activation_mb": 256.9609375
+  },
+  "perplexity": {
+    "dataset": "built-in text",
+    "tokens": 800,
+    "tokens_predicted": 799,
+    "loss": 10.714645385742188,
+    "ppl": 45010.243930339944
+  }
+}

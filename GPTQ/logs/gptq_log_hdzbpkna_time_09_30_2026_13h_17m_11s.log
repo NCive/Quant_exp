@@ -1,0 +1,624 @@
+{
+    "process": "gptq",
+    "layer": 0,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0000717998",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "2.061",
+    "fwd_time": "1.927",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 0,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000003775",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.767",
+    "fwd_time": "2.682",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 0,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000261103",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.901",
+    "fwd_time": "2.998",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 0,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000005455",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.526",
+    "fwd_time": "6.763",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 1,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0000670962",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.791",
+    "fwd_time": "1.294",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 1,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000004555",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.826",
+    "fwd_time": "2.619",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 1,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0001257819",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.882",
+    "fwd_time": "2.840",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 1,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000009163",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.586",
+    "fwd_time": "6.876",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 2,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0000773793",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.885",
+    "fwd_time": "1.259",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 2,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000009229",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.855",
+    "fwd_time": "2.710",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 2,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0001036913",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.915",
+    "fwd_time": "2.803",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 2,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000016297",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.517",
+    "fwd_time": "6.970",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 3,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0000725803",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.912",
+    "fwd_time": "1.298",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 3,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000017555",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.863",
+    "fwd_time": "2.727",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 3,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000799504",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.949",
+    "fwd_time": "3.030",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 3,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000018298",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.642",
+    "fwd_time": "6.956",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 4,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0001248233",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.885",
+    "fwd_time": "1.329",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 4,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000009510",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.841",
+    "fwd_time": "2.756",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 4,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000619872",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.963",
+    "fwd_time": "2.917",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 4,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000018003",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.551",
+    "fwd_time": "6.981",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 5,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0001577575",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.933",
+    "fwd_time": "1.321",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 5,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000012509",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.841",
+    "fwd_time": "2.653",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 5,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000605434",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.948",
+    "fwd_time": "2.860",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 5,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000021989",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.563",
+    "fwd_time": "6.936",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 6,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0002656867",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.897",
+    "fwd_time": "1.335",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 6,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000011785",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.901",
+    "fwd_time": "2.725",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 6,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000622371",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.955",
+    "fwd_time": "2.852",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 6,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000022718",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.517",
+    "fwd_time": "7.022",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 7,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0007516972",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.875",
+    "fwd_time": "1.329",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 7,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000020854",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.848",
+    "fwd_time": "2.745",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 7,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000678680",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.962",
+    "fwd_time": "2.889",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 7,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000031723",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.655",
+    "fwd_time": "6.980",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 8,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0025589303",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.882",
+    "fwd_time": "1.315",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 8,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000026511",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.866",
+    "fwd_time": "2.726",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 8,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000763469",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.948",
+    "fwd_time": "2.864",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 8,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000048101",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.583",
+    "fwd_time": "6.919",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 9,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0046387725",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.882",
+    "fwd_time": "1.370",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 9,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000010556",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.873",
+    "fwd_time": "2.790",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 9,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000846473",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.955",
+    "fwd_time": "2.933",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 9,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000070793",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.527",
+    "fwd_time": "7.027",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 10,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0114453994",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.900",
+    "fwd_time": "1.323",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 10,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000009114",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.872",
+    "fwd_time": "2.759",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 10,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000808070",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.938",
+    "fwd_time": "2.919",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 10,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000103543",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.568",
+    "fwd_time": "7.017",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 11,
+    "module": "attention.query_key_value",
+    "feat: in, out": "768, 2304",
+    "dtype: size": "f16: 3.6MB",
+    "loss": "0.0093144905",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.921",
+    "fwd_time": "1.268",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 11,
+    "module": "attention.dense",
+    "feat: in, out": "768, 768",
+    "dtype: size": "f16: 1.2MB",
+    "loss": "0.0000009571",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.853",
+    "fwd_time": "2.692",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 11,
+    "module": "mlp.dense_h_to_4h",
+    "feat: in, out": "768, 3072",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000910219",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "0.959",
+    "fwd_time": "2.831",
+    "(v)ram": "n/a"
+}
+{
+    "process": "gptq",
+    "layer": 11,
+    "module": "mlp.dense_4h_to_h",
+    "feat: in, out": "3072, 768",
+    "dtype: size": "f16: 4.8MB",
+    "loss": "0.0000168101",
+    "samples": "131072",
+    "damp": "0.10000",
+    "time": "3.590",
+    "fwd_time": "6.962",
+    "(v)ram": "n/a"
+}

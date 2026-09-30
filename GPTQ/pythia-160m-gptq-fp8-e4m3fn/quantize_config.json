@@ -1,0 +1,45 @@
+{
+  "bits": 8,
+  "group_size": -1,
+  "desc_act": false,
+  "lm_head": false,
+  "method": "fp8",
+  "quant_method": "fp8",
+  "format": "float8_e4m3fn",
+  "checkpoint_format": "float8_e4m3fn",
+  "pack_dtype": "int32",
+  "meta": {
+    "quantizer": [
+      "gptqmodel:7.5.0"
+    ],
+    "uri": "https://github.com/modelcloud/gptqmodel",
+    "damp_percent": null,
+    "damp_auto_increment": null,
+    "static_groups": null,
+    "true_sequential": true,
+    "mse": null,
+    "gptaq": null,
+    "foem": null,
+    "act_group_aware": null,
+    "fallback": {
+      "strategy": "rtn",
+      "threshold": "0.5%",
+      "smooth": null
+    },
+    "offload_to_disk": false,
+    "telemetry": {
+      "device": false
+    },
+    "offload_to_disk_path": null,
+    "pack_impl": "cpu",
+    "gc_mode": "interval",
+    "wait_for_submodule_finalizers": false,
+    "auto_forward_data_parallel": true,
+    "dense_vram_strategy": "exclusive",
+    "dense_vram_strategy_devices": null,
+    "moe_vram_strategy": "exclusive",
+    "moe_vram_strategy_devices": null
+  },
+  "weight_scale_method": "row",
+  "weight_scale_semantics": "inverse"
+}

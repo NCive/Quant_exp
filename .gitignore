@@ -1,0 +1,13 @@
+# Virtual environment
+venv/
+.venv/
+
+# VS Code
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Model weights
+*.safetensors

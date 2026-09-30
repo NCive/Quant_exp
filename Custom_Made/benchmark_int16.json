@@ -1,0 +1,73 @@
+{
+  "env": {
+    "model": "EleutherAI/pythia-160m",
+    "method": "custom_fake_int16",
+    "dtype": "torch.float32",
+    "attention": "sdpa",
+    "device": "cuda",
+    "device_name": "AMD Radeon 780M Graphics",
+    "torch": "2.13.0+rocm10.0.0",
+    "hip": "7.15.26333",
+    "batch_size": 1,
+    "warmup": 10,
+    "iterations": 50
+  },
+  "quantization": {
+    "bits": 16,
+    "group_size": 64,
+    "scheme": "symmetric",
+    "weight_dtype": "torch.int16",
+    "scale_dtype": "torch.float32",
+    "max_logit_diff_vs_fp32": 0.18792724609375
+  },
+  "size": {
+    "params": 162322944,
+    "parameter_memory_mb": 147.521484375,
+    "buffer_memory_mb": 243.36920166015625,
+    "storage_mb": 390.89068603515625,
+    "fp32_storage_mb": 619.2129516601562,
+    "bits_per_param": 20.200648504748656
+  },
+  "prefill": {
+    "32": {
+      "mean_ms": 36.032415999870864,
+      "median_ms": 35.55115000017395,
+      "std_ms": 5.871173815415736,
+      "p95_ms": 39.43539999818313,
+      "tokens_per_sec": 900.1115294397911
+    },
+    "128": {
+      "mean_ms": 74.00248400001146,
+      "median_ms": 71.94340000023658,
+      "std_ms": 10.052204900709723,
+      "p95_ms": 87.20769999854383,
+      "tokens_per_sec": 1779.1764081149777
+    },
+    "512": {
+      "mean_ms": 277.68950199955725,
+      "median_ms": 267.7965499988204,
+      "std_ms": 30.6294021196916,
+      "p95_ms": 338.4670000014012,
+      "tokens_per_sec": 1911.8991637579172
+    }
+  },
+  "decode": {
+    "mean_ms": 39.47203968755275,
+    "median_ms": 34.357800001089345,
+    "std_ms": 11.685727144121385,
+    "p95_ms": 66.49539999853005,
+    "tokens_per_sec": 29.105472409999887
+  },
+  "memory": {
+    "weights_mb": 436.306640625,
+    "peak_mb": 684.556640625,
+    "activation_mb": 248.25
+  },
+  "perplexity": {
+    "dataset": "built-in text",
+    "tokens": 800,
+    "tokens_predicted": 799,
+    "loss": 2.943887948989868,
+    "ppl": 18.989533310640805
+  }
+}

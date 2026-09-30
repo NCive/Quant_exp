@@ -1,0 +1,102 @@
+{
+  "env": {
+    "model": "EleutherAI/pythia-160m",
+    "method": "custom_fake_turboquant",
+    "dtype": "torch.float32",
+    "attention": "sdpa",
+    "device": "cuda",
+    "device_name": "AMD Radeon 780M Graphics",
+    "torch": "2.13.0+rocm10.0.0",
+    "hip": "7.15.26333",
+    "batch_size": 1,
+    "warmup": 10,
+    "iterations": 50
+  },
+  "quantization": {
+    "format": "TurboQuant (random Hadamard rotation + Lloyd-Max codebook)",
+    "block_size": 128,
+    "bits": 4,
+    "num_levels": 16,
+    "rotation_seed": 46,
+    "lloyd_max_iterations": 100,
+    "centroids": [
+      -0.2368120402097702,
+      -0.17976470291614532,
+      -0.14064505696296692,
+      -0.10910286754369736,
+      -0.08177290111780167,
+      -0.05695602670311928,
+      -0.03361716493964195,
+      -0.011142605915665627,
+      0.011043118312954903,
+      0.033517707139253616,
+      0.05685662850737572,
+      0.08167360723018646,
+      0.10900378972291946,
+      0.14054639637470245,
+      0.1796671748161316,
+      0.23672239482402802
+    ],
+    "radius_dtype": "torch.float16",
+    "code_dtype": "torch.uint8 (two 4-bit codes per byte)",
+    "shared_table_bytes": 66112,
+    "quantized_layers": 49,
+    "quantized_params": 123568128,
+    "bits_per_quantized_weight": 4.125,
+    "bits_per_quantized_weight_with_shared_tables": 4.129280197560329,
+    "weight_relative_rmse": 0.09484224673177502,
+    "max_logit_diff_vs_fp32": 276.59967041015625,
+    "mean_logit_diff_vs_fp32": 28.84709930419922
+  },
+  "size": {
+    "params": 162322944,
+    "parameter_memory_mb": 147.521484375,
+    "buffer_memory_mb": 61.07965087890625,
+    "shared_table_mb": 0.06304931640625,
+    "storage_mb": 208.6641845703125,
+    "fp32_storage_mb": 619.2129516601562,
+    "bits_per_param": 10.783454297132511
+  },
+  "prefill": {
+    "32": {
+      "mean_ms": 154.86124600080075,
+      "median_ms": 152.22510000603506,
+      "std_ms": 22.18584896242479,
+      "p95_ms": 168.34530000051018,
+      "tokens_per_sec": 210.2150039561895
+    },
+    "128": {
+      "mean_ms": 224.45613599964418,
+      "median_ms": 210.76850000099512,
+      "std_ms": 32.96394666397732,
+      "p95_ms": 303.73589998635,
+      "tokens_per_sec": 607.3013756770848
+    },
+    "512": {
+      "mean_ms": 508.6741399986204,
+      "median_ms": 491.17809999734163,
+      "std_ms": 44.32701952479308,
+      "p95_ms": 634.3131000030553,
+      "tokens_per_sec": 1042.391751592286
+    }
+  },
+  "decode": {
+    "mean_ms": 169.8295212499488,
+    "median_ms": 161.47360000468325,
+    "std_ms": 24.392994936729973,
+    "p95_ms": 210.09170000615995,
+    "tokens_per_sec": 6.192962812317288
+  },
+  "memory": {
+    "model_memory_before_fwd_mb": 257.64306640625,
+    "peak_mb": 1096.14306640625,
+    "activation_mb": 838.5
+  },
+  "perplexity": {
+    "dataset": "built-in text",
+    "tokens": 800,
+    "tokens_predicted": 799,
+    "loss": 9.170634269714355,
+    "ppl": 9610.718544939326
+  }
+}

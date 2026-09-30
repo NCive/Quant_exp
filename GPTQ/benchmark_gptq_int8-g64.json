@@ -1,0 +1,76 @@
+{
+  "env": {
+    "model": "EleutherAI/pythia-160m",
+    "method": "gptq_int8",
+    "device": "cuda:0",
+    "threads": 8,
+    "torch": "2.13.0+rocm10.0.0",
+    "batch_size": 1,
+    "warmup": 10,
+    "iterations": 50,
+    "bits": 8,
+    "group_size": 64,
+    "scheme": "symmetric, GPTQ",
+    "backend": "BACKEND.GPTQ_TORCH",
+    "eager_dequant": true,
+    "kernel_classes": {
+      "TorchLinear": 48
+    },
+    "load_time_s": 1.1218781000061426
+  },
+  "size": {
+    "params": 162322944,
+    "storage_mb": 382.78863525390625,
+    "fp32_storage_mb": 619.2129516601562,
+    "effective_bits_per_param": 19.781946586676003,
+    "checkpoint_mb": 236.0867052078247
+  },
+  "prefill": {
+    "32": {
+      "mean_ms": 67.89617799862754,
+      "median_ms": 56.63160000403877,
+      "std_ms": 24.854496169978308,
+      "p95_ms": 125.12539999443106,
+      "tokens_per_sec": 565.0555519836605
+    },
+    "128": {
+      "mean_ms": 102.77921000146307,
+      "median_ms": 93.66970001428854,
+      "std_ms": 22.853007947490195,
+      "p95_ms": 140.1703000010457,
+      "tokens_per_sec": 1366.503789170614
+    },
+    "512": {
+      "mean_ms": 287.59990399703383,
+      "median_ms": 272.78249998926185,
+      "std_ms": 39.02582341286355,
+      "p95_ms": 373.4419999818783,
+      "tokens_per_sec": 1876.9532503740343
+    }
+  },
+  "decode": {
+    "mean_ms": 68.71962499935762,
+    "median_ms": 58.413649996509776,
+    "std_ms": 23.733251035317586,
+    "p95_ms": 115.53509999066591,
+    "tokens_per_sec": 17.119286332214305
+  },
+  "memory": {
+    "kind": "cuda_allocated",
+    "before_mb": 418.84326171875,
+    "peak_mb": 518.59326171875,
+    "activation_mb": 99.75
+  },
+  "perplexity": {
+    "dataset": "built-in text",
+    "tokens": 800,
+    "tokens_predicted": 799,
+    "loss": 2.9412641525268555,
+    "ppl": 18.9397739480724
+  },
+  "fidelity": {
+    "max_abs_logit_diff": 42.47442626953125,
+    "mean_abs_logit_diff": 1.8406357765197754,
+    "top1_agreement": 0.953125
+  }
+}
